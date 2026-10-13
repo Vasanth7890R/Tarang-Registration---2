@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 5px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        p {
+            color: #e0e0e0;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 480px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.8s ease-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 18px;
+            border-bottom: 2px solid #764ba2;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #444;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+        }
+
+        input[type="text"]:hover,
+        input[type="tel"]:hover,
+        input[type="email"]:hover,
+        select:hover {
+            border-color: #764ba2;
+            transform: scale(1.01);
+        }
+
+        input[type="text"]:focus,
+        input[type="tel"]:focus,
+        input[type="email"]:focus,
+        select:focus {
+            border-color: #764ba2;
+            outline: none;
+            box-shadow: 0 0 8px rgba(118, 75, 162, 0.4);
+            transform: scale(1.02);
+        }
+
+        input[type="file"] {
+            margin-top: 6px;
+            cursor: pointer;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            transition: transform 0.15s ease, background-color 0.3s ease, box-shadow 0.2s ease;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        input[type="submit"]:active {
+            transform: scale(0.95);
+        }
+
+        input[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+            margin-left: 10px;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c82333;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(220, 53, 69, 0.4);
+        }
+
+        input[type="reset"]:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Student Registration Form</h1>
+
+<p>Register Now</p>
+
+<form>
+
+<h2>Student Details</h2>
+
+<label>Name:</label><br>
+<input type="text" name="name"><br><br>
+
+<label>Department:</label><br>
+<input type="text" name="department"><br><br>
+
+<label>College Name:</label><br>
+<input type="text" name="college"><br><br>
+
+<label>Year:</label><br>
+<select name="year">
+    <option>Select Year</option>
+    <option>I Year</option>
+    <option>II Year</option>
+    <option>III Year</option>
+</select><br><br>
+
+<h2>Competition Details</h2>
+
+<label>Select Competition:</label><br>
+<select name="competition">
+    <option>Select Competition</option>
+    <option>Technical Quiz</option>
+    <option>Coding Competition</option>
+    <option>Dance</option>
+    <option>Arts</option>
+    <option>Photography</option>
+    <option>Short Film</option>
+    <option>Debugging Competition</option>
+    <option>Project Presentation</option>
+</select><br><br>
+
+<h2>Contact Details</h2>
+
+<label>Phone Number:</label><br>
+<input type="tel" name="phone"><br><br>
+
+<label>Email:</label><br>
+<input type="email" name="email"><br>
+
+<h2>Payment Details</h2>
+
+<label>Payment Method:</label><br>
+
+<input type="radio" name="payment"> UPI
+<input type="radio" name="payment"> Cash
+
+<br><br>
+
+<label>Transaction ID:</label><br>
+<input type="text" name="transaction"><br><br>
+
+<label>Upload Payment Screenshot:</label><br>
+<input type="file" name="payment"><br><br>
+
+<input type="submit" value="Submit Registration">
+<input type="reset" value="Clear">
+
+</form>
+
+</body>
+
+</html>
